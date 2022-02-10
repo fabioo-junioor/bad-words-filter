@@ -1,18 +1,14 @@
-// Import dependencies
+// Importar dependências
 const Filter = require("bad-words");
-
-// Make a new filter
+// Cria um novo filtro
 const filter = new Filter();
-
-// https://www.cs.cmu.edu/~biglou/resources/
-// Add extra words to the bad words list
+// Adiciona palavras extras à lista de palavrões
 const words = require("./extra-words.json");
 
 filter.addWords(...words);
-
 filter.addWords("news");
 
-// Test the bad words filter
+// Testa o filtro de palavrões
 console.log(filter.clean("Don't be an ash0le"));
 console.log(filter.clean("You fucking mother fucker"));
 console.log(filter.clean("You are a son of a whore"));
