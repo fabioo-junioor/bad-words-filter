@@ -1,1 +1,3 @@
-# bad-words-filter
+### bad-words-filter  
+
+npm install bad-words --save
